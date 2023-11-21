@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Controle_de_alunos_MAUI.MainPage"
+             Title="Lista de alunos">
+    
+   
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <CarouselView ItemsSource="{Binding Alunos}">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame CornerRadius="9"
+                                   Margin="10"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="CenterAndExpand">
+                                <StackLayout>
+                                    <Label Text="{Binding Nome}"
+                                           FontSize="Medium"
+                                           HorizontalOptions="Start"/>
+                                    
+                                    
+
+
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
